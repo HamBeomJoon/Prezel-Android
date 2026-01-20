@@ -1,6 +1,6 @@
 package com.team.prezel.buildlogic.convention.plugin
 
-import com.team.prezel.buildlogic.convention.libs
+import com.team.prezel.buildlogic.convention.internal.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -19,6 +19,7 @@ class HiltConventionPlugin : Plugin<Project> {
 
             dependencies {
                 "ksp"(libs.findLibrary("hilt.compiler").get())
+                "ksp"(libs.findLibrary("kotlin.metadata.jvm").get())
             }
 
             pluginManager.withPlugin("org.jetbrains.kotlin.jvm") {

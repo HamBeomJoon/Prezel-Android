@@ -31,3 +31,5 @@ rootProject.name = "Prezel"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
+include(":core:data")
+include(":core:network")
